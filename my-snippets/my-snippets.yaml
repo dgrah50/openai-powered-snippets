@@ -1,0 +1,249 @@
+commands:
+  react_refactor:
+    name: react_refactor
+    prompt: >
+      Pretend that you are Dan Abramov, an elite React engineer,
+      Refactor the given React TypeScript code to make the code DRY.
+      Ensure to use type annotations where necessary and add comments only when necessary, but don't litter the code with them.
+      Rename variables to improve the meaning of code only if necessary.
+      Aim for DRY, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+
+  extract_css:
+    name: extract_css
+    prompt: >
+      Pretend that you are Dan Abramov, an elite React engineer,
+      Refactor the given React TypeScript code to remove all inline styles.
+      Move the inline styles to use the antd-style css-in-js solution.
+      Aim for DRY, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+
+  react_optimize_hooks:
+    name: react_optimize_hooks
+    prompt: >
+      Pretend that you are Kent C. Dodds, an elite React engineer,
+      Optimize the given React TypeScript code to use React hooks more effectively.
+      Convert class components to functional components with hooks if applicable.
+      Ensure to use type annotations where necessary and add comments only when necessary, but don't litter the code with them.
+      Aim for DRY, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+
+  convert_to_typescript:
+    name: convert_to_typescript
+    prompt: >
+      Pretend that you are TypeScript's creator, Anders Hejlsberg,
+      Convert the given JavaScript code to TypeScript.
+      Add appropriate type annotations, interfaces, and types to ensure type safety.
+      Aim for DRY, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+  createUnitTest:
+    name: Create unit test.
+    prompt: >
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING unit test in {user.unitTestFramework} framework for following function. 
+      code:
+      {system.selection}`
+    handler: 
+        func: 'writeFile'
+        args: 
+            filePath: 'user.testFileName'
+
+  optimize_performance:
+    name: optimize_performance
+    prompt: >
+      Pretend that you are Addy Osmani, an elite JavaScript and Performance engineer,
+      Optimize the given React TypeScript code for performance.
+      Use techniques such as memoization, lazy loading, and code splitting where appropriate.
+      Ensure to use type annotations where necessary and add comments only when necessary, but don't litter the code with them.
+      Aim for DRY, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+
+  convert_to_custom_hooks:
+    name: convert_to_custom_hooks
+    prompt: >
+      Pretend that you are Kent C. Dodds, an elite React engineer,
+      Convert repetitive logic in the given React TypeScript code into custom hooks.
+      Ensure to use type annotations where necessary and add comments only when necessary, but don't litter the code with them.
+      Aim for DRY, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+  optimize_python_code:
+    name: optimize_python_code
+    prompt: >
+      Pretend that you are Raymond Hettinger, an elite Python engineer,
+      Optimize the given Python code for performance and readability.
+      Use list comprehensions, generators, and other Pythonic idioms where appropriate.
+      Ensure to add comments only when necessary, but don't litter the code with them.
+      Aim for DRY, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+
+  add_type_annotations:
+    name: add_type_annotations
+    prompt: >
+      Pretend that you are Guido van Rossum, the creator of Python,
+      Add type annotations to the following Python code to ensure type safety.
+      Ensure to use typing hints from the typing module where necessary.
+      Aim for DRY, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+
+  convert_to_asyncio:
+    name: convert_to_asyncio
+    prompt: >
+      Pretend that you are David Beazley, an expert in Python concurrency,
+      Convert the following Python code to use asyncio for asynchronous programming.
+      Ensure to handle async functions, await statements, and event loops correctly.
+      Aim for DRY, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+
+  add_unit_tests_python:
+    name: add_unit_tests_python
+    prompt: >
+      Pretend that you are Ned Batchelder, an expert in Python testing,
+      Add unit tests to the following Python code using the unittest framework.
+      Ensure to cover edge cases and aim for high test coverage.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: writeFile
+    args:
+      filePath: user.testFileName
+
+  optimize_data_processing:
+    name: optimize_data_processing
+    prompt: >
+      Pretend that you are Wes McKinney, the creator of pandas,
+      Optimize the following Python code for data processing using pandas.
+      Ensure to use efficient data manipulation techniques and vectorized operations where appropriate.
+      Aim for DRY, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+
+  add_error_handling_react:
+    name: add_error_handling_react
+    prompt: >
+      Pretend that you are Dan Abramov, an elite React engineer,
+      Enhance the given React TypeScript code by adding proper error handling.
+      Ensure to use try-catch blocks where applicable and handle potential errors gracefully.
+      Add appropriate error messages and ensure the UI can display error states if necessary.
+      Aim for robust, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+
+  handle_edge_cases_react:
+    name: handle_edge_cases_react
+    prompt: >
+      Pretend that you are Kent C. Dodds, an elite React engineer,
+      Improve the given React TypeScript code by considering and handling edge cases.
+      Ensure to check for null, undefined, and other edge values.
+      Add appropriate error messages and ensure the UI can display error states if necessary.
+      Aim for robust, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+
+  add_error_handling_python:
+    name: add_error_handling_python
+    prompt: >
+      Pretend that you are Raymond Hettinger, an elite Python engineer,
+      Enhance the given Python code by adding proper error handling.
+      Ensure to use try-except blocks where applicable and handle potential errors gracefully.
+      Add appropriate error messages and ensure the code can recover from errors if possible.
+      Aim for robust, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+
+  handle_edge_cases_python:
+    name: handle_edge_cases_python
+    prompt: >
+      Pretend that you are Guido van Rossum, the creator of Python,
+      Improve the given Python code by considering and handling edge cases.
+      Ensure to check for null, undefined, and other edge values.
+      Add appropriate error messages and ensure the code can recover from errors if possible.
+      Aim for robust, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      Your responses should only be code, WITHOUT ANY EXPLANATION OR FORMATTING
+      code:
+      {system.selection}
+    handler: replace
+variables:
+  testFileName: 
+    js: ({ baseFolder,fileName,fileExtension }) => `${baseFolder}\\tests\\${fileName}.test.${fileExtension}`
+  unitTestFramework: jest

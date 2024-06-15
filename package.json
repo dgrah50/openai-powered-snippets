@@ -2,7 +2,7 @@
   "name": "ai-powered-snippets",
   "displayName": "AI Enhanced Snippets",
   "description": "The Visual Studio Code extension enables developers to integrate the ChatGPT prompt into VS Code",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "icon": "media/icon.png",
   "keywords": [
     "chatgpt",
@@ -30,19 +30,19 @@
     "menus": {
       "commandPalette": [
         {
-          "command": "openaipoweredsnippet.run"
+          "command": "ai-powered-snippets.run"
         }
       ]
     },
     "commands": [
       {
-        "command": "openaipoweredsnippet.run",
+        "command": "ai-powered-snippets.run",
         "title": "Run OpenAI Snippet"
       }
     ],
     "keybindings": [
       {
-        "command": "openaipoweredsnippet.run",
+        "command": "ai-powered-snippets.run",
         "key": "ctrl+o ctrl+a"
       }
     ],
@@ -50,25 +50,25 @@
       "title": "GPT Prompt Integrator",
       "type": "object",
       "properties": {
-        "openaipoweredsnippet.openAIToken": {
+        "ai-powered-snippets.openAIToken": {
           "type": "string",
           "default": "",
           "description": "Your openai token",
           "order": 1
         },
-        "openaipoweredsnippet.snippetFiles": {
+        "ai-powered-snippets.snippetFiles": {
           "type": "string",
           "default": "",
           "description": "Path for user defined snippet files. For multiple path separate with ';'  C:\\MySnipFolder1;C:\\MySnipFolder2\\snip.js",
           "order": 2
         },
-        "openaipoweredsnippet.openAIModel": {
+        "ai-powered-snippets.openAIModel": {
           "type": "string",
           "default": "gpt-3.5-turbo",
           "description": "openai model",
           "order": 3
         },
-        "openaipoweredsnippet.openAIEndpoint": {
+        "ai-powered-snippets.openAIEndpoint": {
           "type": "string",
           "default": "https://api.openai.com/v1",
           "description": "OpenAI API endpoint",

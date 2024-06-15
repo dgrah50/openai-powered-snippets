@@ -5,7 +5,7 @@ export default defineConfig({
     outDir: "dist",
     lib: {
       entry: "src/extension.ts",
-      name: "OpenAIPoweredSnippets",
+      name: "ai-powered-snippetss",
       fileName: (format) => `extension.js`,
     },
     rollupOptions: {
