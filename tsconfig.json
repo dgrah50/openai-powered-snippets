@@ -18,7 +18,8 @@
 	},
 	"exclude": [
 		"dist",
-		"webpack.config.js",
+		"out",
+		"vite.config.js",
 		"node_modules",
 		"snippet-editor",
 		"sample-snippet-files",
