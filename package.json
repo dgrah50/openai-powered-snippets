@@ -1,8 +1,8 @@
 {
-  "name": "openaipoweredsnippet",
-  "displayName": "GPT Prompt Integrator",
+  "name": "ai-powered-snippets",
+  "displayName": "AI Enhanced Snippets",
   "description": "The Visual Studio Code extension enables developers to integrate the ChatGPT prompt into VS Code",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "icon": "media/icon.png",
   "keywords": [
     "chatgpt",
@@ -11,10 +11,10 @@
     "openai",
     "snippet"
   ],
-  "publisher": "faaydemir",
+  "publisher": "dgrah50",
   "repository": {
     "type": "git",
-    "url": "https://github.com/faaydemir/openai-powered-snippets.git"
+    "url": "https://github.com/dgrah50/openai-powered-snippets.git"
   },
   "engines": {
     "vscode": "^1.62.0"

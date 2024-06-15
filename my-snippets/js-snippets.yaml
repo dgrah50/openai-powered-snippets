@@ -1,0 +1,31 @@
+commands:
+  refactor_react:
+    name: refactor_react
+    prompt: >
+      Pretend that you are Dan Abramov, an elite React engineer,
+      Refactor the given React TypeScript code to make the code DRY.
+      Ensure to use type annotations where necessary and add comments only when necessary, but don't litter the code with them.
+      Rename variables to improve the meaning of code only if necessary.
+      Aim for DRY, maintainable, professional code.
+
+      Do not under any circumstances return any markdown - RETURN CODE ONLY, no yapping at all.
+
+      code:
+      {system.selection}
+    handler: replace
+
+  createUnitTest:
+    name: Create unit test.
+    prompt: >
+      Create unit test in {user.unitTestFramework} framework for following function. 
+      code:
+      {system.selection}`
+    handler: 
+        func: 'writeFile'
+        args: 
+            filePath: 'user.testFileName'
+
+variables:
+  testFileName: 
+    js: ({ baseFolder,fileName,fileExtension }) => `${baseFolder}\\tests\\${fileName}.test.${fileExtension}`
+  unitTestFramework: jest
