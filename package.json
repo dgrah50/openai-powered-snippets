@@ -2,7 +2,7 @@
   "name": "ai-powered-snippets",
   "displayName": "AI Enhanced Snippets",
   "description": "The Visual Studio Code extension enables developers to integrate the ChatGPT prompt into VS Code",
-  "version": "0.0.24",
+  "version": "0.0.26",
   "icon": "media/icon.png",
   "keywords": [
     "chatgpt",
@@ -104,7 +104,7 @@
   },
   "dependencies": {
     "axios": "^1.2.1",
-    "openai": "^3.2.1",
+    "openai": "^3.3.0",
     "yaml": "^2.2.1"
   }
 }

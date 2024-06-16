@@ -5,7 +5,7 @@ export default defineConfig({
     outDir: "dist",
     lib: {
       entry: "src/extension.ts",
-      name: "ai-powered-snippetss",
+      name: "ai-powered-snippets",
       fileName: (format) => `extension.js`,
     },
     rollupOptions: {
