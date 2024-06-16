@@ -19,7 +19,7 @@
 	"exclude": [
 		"dist",
 		"out",
-		"vite.config.js",
+		"webpack.config.js",
 		"node_modules",
 		"snippet-editor",
 		"sample-snippet-files",
